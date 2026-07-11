@@ -39,7 +39,6 @@ def check_and_send_reminders():
     """
     current_time = timezone.now().time()
 
-
     habits = Habit.objects.filter(is_pleasant=False)
 
     sent_count = 0
@@ -52,12 +51,10 @@ def check_and_send_reminders():
             and habit_time.minute == current_time.minute
         ):
 
-
             if habit.last_completed:
                 days_since = (timezone.now() - habit.last_completed).days
                 if days_since < habit.period:
                     continue
-
 
             send_habit_reminder.delay(habit.id)
             sent_count += 1

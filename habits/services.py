@@ -7,7 +7,6 @@ def send_telegram_message(chat_id, message):
     Отправка сообщения в Telegram через Bot API.
     """
 
-
     if not settings.TELEGRAM_BOT_TOKEN:
         print("WARNING: TELEGRAM_BOT_TOKEN не настроен!")
         return None

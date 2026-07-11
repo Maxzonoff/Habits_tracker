@@ -9,7 +9,6 @@ class HabitAdmin(admin.ModelAdmin):
     Настройка отображения привычек в админке.
     """
 
-
     list_display = (
         "action",
         "owner",
@@ -22,12 +21,9 @@ class HabitAdmin(admin.ModelAdmin):
         "created_at",
     )
 
-
     list_filter = ("is_pleasant", "is_public", "period", "created_at")
 
-
     search_fields = ("action", "place", "owner__username")
-
 
     readonly_fields = ("created_at",)
 
