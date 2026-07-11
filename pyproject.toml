@@ -1,0 +1,32 @@
+[project]
+name = "habits-tracker"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "MaxZ",email = "maxzonoff@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django (>=6.0.6,<7.0.0)",
+    "djangorestframework (>=3.17.1,<4.0.0)",
+    "django-cors-headers (>=4.9.0,<5.0.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "celery (>=5.6.3,<6.0.0)",
+    "redis (>=8.0.1,<9.0.0)",
+    "requests (>=2.34.2,<3.0.0)",
+    "psycopg2-binary (>=2.9.12,<3.0.0)",
+    "drf-yasg (>=1.21.15,<2.0.0)",
+    "coverage (>=7.15.0,<8.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "black (>=26.5.1,<27.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+exclude = [".venv", "__pycache__", "migrations"]
+max-line-length = 120
