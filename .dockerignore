@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# Виртуальное окружение
+.venv
+venv
+
+# Переменные окружения — секретам не место в образе
+.env
+
+# IDE
+.idea
+.vscode
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Рабочие файлы проекта
+dump.rdb
+celerybeat-schedule.db
+.coverage
+htmlcov/
+
+# Docker-файлы — внутри образа не нужны
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# GitHub Actions
+.github/

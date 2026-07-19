@@ -26,7 +26,7 @@ class HabitListCreateView(generics.ListCreateAPIView):
 
         # Логи для отладки
         user = self.request.user
-        print(f"=== DEBUG: Привычка создана ===")
+        print("=== DEBUG: Привычка создана ===")
         print(f"Пользователь: {user.username}")
         print(f"Chat ID: {user.chat_id}")
         print(f"Telegram ID: {user.telegram_id}")
