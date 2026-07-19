@@ -68,7 +68,6 @@ class Command(BaseCommand):
         Обрабатывает одно обновление от Telegram.
         """
 
-
         if "message" not in update:
             return
 
@@ -78,7 +77,6 @@ class Command(BaseCommand):
         username = message["from"].get("username", "unknown")
 
         self.stdout.write(f"Сообщение от @{username}: {text}")
-
 
         if text == "/start":
             self.handle_start(chat_id, username, message["from"])
