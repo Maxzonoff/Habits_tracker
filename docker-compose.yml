@@ -1,6 +1,7 @@
 services:
   web:
     build: .
+    image: ${DOCKER_HUB_USERNAME:-local}/habits-tracker:latest
     command: >
       bash -c "python manage.py migrate &&
                python manage.py collectstatic --noinput &&
@@ -49,6 +50,7 @@ services:
 
   celery:
     build: .
+    image: ${DOCKER_HUB_USERNAME:-local}/habits-tracker:latest
     command: celery -A config worker --loglevel=INFO
     env_file:
       - .env
@@ -64,6 +66,7 @@ services:
 
   celery-beat:
     build: .
+    image: ${DOCKER_HUB_USERNAME:-local}/habits-tracker:latest
     command: celery -A config beat --loglevel=INFO
     env_file:
       - .env
@@ -79,6 +82,7 @@ services:
 
   bot:
     build: .
+    image: ${DOCKER_HUB_USERNAME:-local}/habits-tracker:latest
     command: python manage.py bot
     env_file:
       - .env
